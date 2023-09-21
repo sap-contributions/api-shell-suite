@@ -32,6 +32,10 @@ Before proceeding with the SAP Docker API Test Suite, please ensure you have the
   
   *Installation Guide:* [cURL Official Documentation](https://curl.se/docs/install.html)
 
+- **jq:** A lightweight and flexible command-line JSON processor.
+
+  *Installation:* [jq Official Documentation](https://stedolan.github.io/jq/download/)
+
 - **Docker:** A platform used to develop, ship, and run applications inside containers. This ensures a consistent environment for testing the SAP APIs.
 
   *Installation Guide:* [Docker Official Documentation](https://docs.docker.com/get-docker/)
