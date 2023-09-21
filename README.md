@@ -42,6 +42,15 @@ Before proceeding with the SAP Docker API Test Suite, please ensure you have the
 
 Please verify the correct installation and functioning of both tools before continuing.
 
+### Additional Requirements
+
+- **Shell Script Execution Permissions:** The suite is composed of shell script files. Make sure these files have execution permissions before running the tests.
+
+  To set the execution permissions, navigate to the directory containing the shell scripts and run:
+
+  ```
+  chmod +x *.sh
+  ```
 ### Configuration
 
 Create a copy of the `set-tenant-template.sh` file and rename it to `set-tenant.sh`, changing the variables accordingly. Execute the same steps for `set-user-template.sh`, creating the `set-user.sh` file.
@@ -67,6 +76,7 @@ We can use this tool considering three different contexts, passing the `script_t
 ./app/run.sh --load-data
 ```
 *Optionaly, you can run the command in the background and redirect the output to a log file.*
+
 ```
 ./app/run.sh --load-data > output.log &
 ```
@@ -80,6 +90,7 @@ We can use this tool considering three different contexts, passing the `script_t
 #### Using Docker-Compose
 
 > ⚠️ **Warning:** Be careful when scaling the number of service instances (second parameter).
+
 ```
 ./app/run-with-docker-compose.sh --load-data 3
 ```
