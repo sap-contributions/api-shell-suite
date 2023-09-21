@@ -97,7 +97,7 @@ We can use this tool considering three different contexts, passing the `script_t
 
 ## Support
 
-This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.tools.sap/I831372/api-data-load/issues).
+This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/sap-contributions/api-shell-suite/issues).
 
 ## Code of Conduct
 
