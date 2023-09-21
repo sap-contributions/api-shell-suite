@@ -1,0 +1,4 @@
+version: '3'
+services:
+  api-shell-suite:
+    image: api-shell-suite
