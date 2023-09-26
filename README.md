@@ -95,6 +95,12 @@ We can use this tool considering three different contexts, passing the `script_t
 ./app/run-with-docker-compose.sh --load-data 3
 ```
 
+## Manual Execution Option
+
+### Overview
+
+The [manual-execution-apis](app/manual-execution-apis) folder contains a set of files that are designed for manual copying and execution. You can go through each file and command, understand its purpose, and execute it as needed. Always ensure you understand the implications of a command before executing it.
+
 ## Entity-Dependency Diagram
 
 ### Overview

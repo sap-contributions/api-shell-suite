@@ -14,6 +14,6 @@ result=$( \
 )
 
 # read token
-access_token=$(echo $result | sed $sed_option 's/.*"access_token":"([^"]*)".*/\1/')
+access_token=$(echo $result | jq -r '.access_token')
 
 echo "[INFO]: Token requested for tenant $tenant"
