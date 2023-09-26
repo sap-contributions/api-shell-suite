@@ -5,12 +5,12 @@ exit 0  # Manual execution APIs
 # Copy, Paste and Execute each step in your console.
 
 # Step 1
-# Set your credentials first
+# Set your credentials
 user=user 
 password=password
 
 # Step 2
-# Set your parameters first
+# Set the parameters
 tenant=farming-test
 region="us10"
 client_id='sb-farming!333|farming!555'
