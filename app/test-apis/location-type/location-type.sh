@@ -15,7 +15,7 @@ source "$local_service_path/$local_service_name-json.sh"
 temp_url="$api_url"
 source "$local_service_path/post.sh"
 
-locationType_ID="$(echo $result | sed $sed_option 's/.*"ID":"([^"]*)".*/\1/')"
+locationType_ID=$(echo "$result" | jq -r '.ID')
 
 temp_url="$api_url($locationType_ID)"
 source "$local_service_path/put.sh"
