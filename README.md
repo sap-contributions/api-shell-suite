@@ -30,6 +30,31 @@
   - **Multi-container Definition:** Define and operate multi-container Docker apps via a straightforward YAML file.
   - **Ease of Use:** With a single command (docker-compose up), you can initiate your entire application stack, encompassing services, databases, queues, etc.
 
+## Entity-Dependency Diagram
+
+### Overview
+
+The [Entity-Dependency Diagram](diagrams/entity-dependency.svg) was created using BPMN (Business Process Model and Notation) which provides some insights and delineate the dependencies between the SAP Intelligent Agriculture entities.
+
+### Purpose of the BPMN Diagram
+
+The BPMN diagram has been designed with the primary intent of showcasing the relationships among the SIA entities. It aims to provide a clear, visual representation of how they interact with each other, the flow of data, and their interdependencies.
+
+### Tool Used: bpmn.io
+
+The diagram was constructed using the `bpmn.io` tool, which is a web-based modeler for BPMN. One of the significant advantages of using bpmn.io is its integration capability with the Camunda Platform. 
+- *Learn More:* [bpmn.io Official Documentation](https://bpmn.io/toolkit/bpmn-js/)
+
+### Why bpmn.io?
+
+- **Web-based Modeler**: Allows for easy access and collaboration. Users can design, edit, and share BPMN diagrams directly from their browser without the need for any local software installation.
+  
+- **Open Source**: `bpmn.io` is open source, making it a community-driven platform that's continually improved by contributions from developers worldwide.
+  
+- **Integration with Camunda**: The Camunda engine powers the core of bpmn.io. Camunda, a BPM platform, provides robust capabilities for designing and executing BPMN workflows. The synergy between bpmn.io and Camunda ensures that the BPMN diagrams created are not only visually descriptive but also executable.
+
+- **Permitted by SAP**: `bpmn.io` is based on Camunda which is **Permitted** by SAP, according to the Software Rating Information (SRI) internal page.
+
 ## QuickStart
 
 ### Requirements
@@ -72,7 +97,7 @@ We can use this tool considering three different contexts, passing the `script_t
 `--load-data`: Use the POST method to create a new data structure for the following APIs.
 - Farms, Areas, FieldGroups, Destinations, LocationTypes, Locations, ClimateZones, Fields
 
-`--test-api`: Execute the GET, PATCH, PUT and DELETE HTTP verbs for the APIs below, deleting the inserted data before finishing the execution.
+`--test-api`: Execute the POST, GET, PATCH, PUT and DELETE HTTP verbs for the below APIs.
 - Farms, Areas, FieldGroups, Destinations, LocationTypes, Locations, ClimateZones
 
 `--load-scenario`: Execute a script to create the necessary data for the following scenarios.
@@ -108,31 +133,6 @@ We can use this tool considering three different contexts, passing the `script_t
 ### Overview
 
 The [manual-execution-apis](app/manual-execution-apis) folder contains a set of files that are designed for manual copying and execution. You can go through each file and command, understand its purpose, and execute it as needed. Always ensure you understand the implications of a command before executing it.
-
-## Entity-Dependency Diagram
-
-### Overview
-
-The [Entity-Dependency Diagram](diagrams/entity-dependency.svg) was created using BPMN (Business Process Model and Notation) which provides some insights and delineate the dependencies between the SAP Intelligent Agriculture entities.
-
-### Purpose of the BPMN Diagram
-
-The BPMN diagram has been designed with the primary intent of showcasing the relationships among the SIA entities. It aims to provide a clear, visual representation of how they interact with each other, the flow of data, and their interdependencies.
-
-### Tool Used: bpmn.io
-
-The diagram was constructed using the `bpmn.io` tool, which is a web-based modeler for BPMN. One of the significant advantages of using bpmn.io is its integration capability with the Camunda Platform. 
-- *Learn More:* [bpmn.io Official Documentation](https://bpmn.io/toolkit/bpmn-js/)
-
-### Why bpmn.io?
-
-- **Web-based Modeler**: Allows for easy access and collaboration. Users can design, edit, and share BPMN diagrams directly from their browser without the need for any local software installation.
-  
-- **Open Source**: `bpmn.io` is open source, making it a community-driven platform that's continually improved by contributions from developers worldwide.
-  
-- **Integration with Camunda**: The Camunda engine powers the core of bpmn.io. Camunda, a BPM platform, provides robust capabilities for designing and executing BPMN workflows. The synergy between bpmn.io and Camunda ensures that the BPMN diagrams created are not only visually descriptive but also executable.
-
-- **Permitted by SAP**: `bpmn.io` is based on Camunda which is **Permitted** by SAP, according to the Software Rating Information (SRI) internal page.
 
 ## Support
 
