@@ -4,23 +4,31 @@
 
 ## About this project
 
-**API Shell Suite** is a lightweight, yet robust project designed to provide an isolated, reproducible, and scalable environment to validate and monitor the availability and performance of SAP Intelligent Agriculture APIs. By combining the containerization capabilities of Docker with the simplicity of shell scripting and the adaptability of `curl`, we have created a tool that seamlessly integrates into your development and operational workflows, providing instant feedback on the health of your SAP interfaces.
+**API Shell Suite** is a `natively simple`, yet robust project designed to provide an isolated, reproducible, and scalable environment to validate and monitor the availability and performance of SAP Intelligent Agriculture APIs. By combining the containerization capabilities of Docker with the simplicity of shell scripting and the adaptability of `curl`, we have created a tool that seamlessly integrates into your development and operational workflows, providing instant feedback on the health of your SAP interfaces.
 
 > ⚠️ **Disclaimer:** Do not use this tool for productive purposes.
 
-### Key Features
+### Key Component Features
 
-- **Containerized Testing:** Utilize Docker to create consistent, isolated testing environments, eliminating the "it works on my machine" problem.
+- **Shell Script**
+  - **Task Automation:** Shell scripts enable the automation of repetitive tasks, ensuring consistency and efficiency.
+  - **Rapid Prototyping:** Facilitates quick prototyping of solutions without needing to compile code.
 
-- **Simplicity:** Using only shell script and `curl`, the tool is easy to set up and run on almost any platform.
+- **cURL**
+  - **Data Transfer:** curl is a command-line tool for transferring data with URLs. It's instrumental for interacting with APIs, web services, and downloading/uploading files.
+  - **Shell Script Integration:** It's frequently embedded within shell scripts to handle network operations.
 
-- **Functional Testing:** Validate the actual functionality of SAP Intelligent Agriculture APIs, ensuring they not only respond but also deliver the expected outputs and side effects.
+- **jq**
+  - **JSON Processing:** jq is a lightweight, flexible command-line JSON processor. It's ideal for parsing, querying, and manipulating JSON data.
+  - **Integration with Curl:** Commonly used in tandem with curl to process JSON responses from APIs or web services within shell scripts.
 
-- **Scenario-Based Execution:** Group APIs into specific scenarios, allowing for targeted testing of workflows and business processes.
+- **Docker**
+  - **Isolation**: Docker containers offer an isolated environment to run apps, ensuring they function consistently across different setups.
+  - **Portability**: A Docker container can run on any machine with Docker installed, regardless of the underlying OS.
 
-- **Performance Testing:** Measure the response times, latency, and throughput of SAP APIs, helping identify potential bottlenecks and ensuring optimal performance.
-
-- **Comprehensive HTTP Verb Support:** Test all facets of your APIs by including all HTTP verbs (GET, POST, PUT, DELETE, PATCH), ensuring a thorough validation of CRUD operations and more.
+- **Docker Compose**
+  - **Multi-container Definition:** Define and operate multi-container Docker apps via a straightforward YAML file.
+  - **Ease of Use:** With a single command (docker-compose up), you can initiate your entire application stack, encompassing services, databases, queues, etc.
 
 ## QuickStart
 
@@ -64,7 +72,7 @@ We can use this tool considering three different contexts, passing the `script_t
 `--load-data`: Use the POST method to create a new data structure for the following APIs.
 - Farms, Areas, FieldGroups, Destinations, LocationTypes, Locations, ClimateZones, Fields
 
-`--test-api`: Exetute the GET, PATCH, PUT and DELETE HTTP verbs for the APIs below, deleting the inserted data before finishing the execution.
+`--test-api`: Execute the GET, PATCH, PUT and DELETE HTTP verbs for the APIs below, deleting the inserted data before finishing the execution.
 - Farms, Areas, FieldGroups, Destinations, LocationTypes, Locations, ClimateZones
 
 `--load-scenario`: Execute a script to create the necessary data for the following scenarios.
@@ -75,7 +83,7 @@ We can use this tool considering three different contexts, passing the `script_t
 ```
 ./app/run.sh --load-data
 ```
-*Optionaly, you can run the command in the background and redirect the output to a log file.*
+*Optionally, you can run the command in the background and redirect the output to a log file.*
 
 ```
 ./app/run.sh --load-data > output.log &
@@ -124,7 +132,7 @@ The diagram was constructed using the `bpmn.io` tool, which is a web-based model
   
 - **Integration with Camunda**: The Camunda engine powers the core of bpmn.io. Camunda, a BPM platform, provides robust capabilities for designing and executing BPMN workflows. The synergy between bpmn.io and Camunda ensures that the BPMN diagrams created are not only visually descriptive but also executable.
 
-- **Permitted by SAP**: `bpmn.io` is based on Camunda which is **Permited** by SAP, according to the Software Rating Information (SRI) internal page.
+- **Permitted by SAP**: `bpmn.io` is based on Camunda which is **Permitted** by SAP, according to the Software Rating Information (SRI) internal page.
 
 ## Support
 

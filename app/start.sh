@@ -2,10 +2,6 @@
 
 script_type=$1
 
-# macOS: -E
-# Git Bash (Windows): -r
-sed_option=-E
-
 timestamp=$(date +%s)
 
 local_request_path="./app/requests"
