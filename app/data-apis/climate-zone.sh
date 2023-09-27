@@ -1,19 +1,20 @@
 #!/bin/sh
 
 # CHANGE the service url
-service_url="foundation-api/v1/odata/v1/FarmService/Farms"
-api_url="$server_url/$service_url"
+service_url="foundation-api/v1/odata/v1/ClimateZoneService/ClimateZones"
 
 echo "[INFO]: Starting ---$service_url--- service."
 
 # CHANGE the json content
 json_body=$(cat <<- EOM
   {
-    "name": "Farm Test v$timestamp",
-    "description": "Farm Test v$timestamp"
+    "name": "Climate Zone Test v$timestamp",
+    "description": "Climate Zone Test v$timestamp"
   }
 EOM
 )
+
+api_url="$server_url/$service_url"
 
 result=$( \
   curl  --silent \
@@ -26,5 +27,5 @@ result=$( \
 
 echo $result
 
-farm_ID=$(echo "$result" | jq -r '.ID')
-echo farm_ID="$farm_ID"
+climateZone_ID=$(echo "$result" | jq -r '.ID')
+echo "[ID]: climateZone_ID=$climateZone_ID"
