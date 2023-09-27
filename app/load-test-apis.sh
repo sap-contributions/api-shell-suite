@@ -9,4 +9,4 @@ source "$local_test_apis_path/location-type.sh"
 source "$local_test_apis_path/location.sh"
 source "$local_test_apis_path/climate-zone.sh"
 
-source "$local_test_apis_path/field/field.sh"
+source "$local_test_apis_path/field.sh"

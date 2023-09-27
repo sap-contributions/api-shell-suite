@@ -22,44 +22,45 @@ EOM
 
 api_url="$server_url/$service_url"
 
+# TODO: check db constraints for fields
 # post
-echo "[INFO]: Run $service_url POST."
+# echo "[INFO]: Run $service_url POST."
 
-result=$( \
-  curl  --silent \
-        --request "POST" \
-        --header "Authorization: Bearer $access_token" \
-        --header "Content-Type: application/json" \
-        --data "$json_body" \
-        --location "$api_url"
-)
-echo $result
+# result=$( \
+#   curl  --silent \
+#         --request "POST" \
+#         --header "Authorization: Bearer $access_token" \
+#         --header "Content-Type: application/json" \
+#         --data "$json_body" \
+#         --location "$api_url"
+# )
+# echo $result
 
-field_ID=$(echo "$result" | jq -r '.ID')
+# field_ID=$(echo "$result" | jq -r '.ID')
 
-# put
-echo "[INFO]: Run $service_url PUT."
+# # put
+# echo "[INFO]: Run $service_url PUT."
 
-result=$( \
-  curl  --silent \
-        --request "PUT" \
-        --header "Authorization: Bearer $access_token" \
-        --header "Content-Type: application/json" \
-        --data "$json_body" \
-        --location "$api_url($field_ID)"
-)
-echo $result
+# result=$( \
+#   curl  --silent \
+#         --request "PUT" \
+#         --header "Authorization: Bearer $access_token" \
+#         --header "Content-Type: application/json" \
+#         --data "$json_body" \
+#         --location "$api_url($field_ID)"
+# )
+# echo $result
 
-# delete
-echo "[INFO]: Run $service_url DELETE."
+# # delete
+# echo "[INFO]: Run $service_url DELETE."
 
-result=$( \
-  curl  --silent \
-        --request "DELETE" \
-        --header "Authorization: Bearer $access_token" \
-        --location "$api_url($field_ID)"
-)
-echo $result
+# result=$( \
+#   curl  --silent \
+#         --request "DELETE" \
+#         --header "Authorization: Bearer $access_token" \
+#         --location "$api_url($field_ID)"
+# )
+# echo $result
 
 # static uuid
 field_ID="42cbc80b-e17b-401b-a745-6e69d2ecb7e0"
