@@ -1,19 +1,30 @@
 #!/bin/sh
 
-# CHANGE the service name
-local_service_name="farm"
 # CHANGE the service url
 service_url="foundation-api/v1/odata/v1/FarmService/Farms"
+api_url="$server_url/$service_url"
 
 echo "[INFO]: Starting ---$service_url--- service."
 
-local_service_path="$local_data_apis_path/$local_service_name"
-api_url="$server_url/$service_url"
+# CHANGE the json content
+json_body=$(cat <<- EOM
+  {
+    "name": "Farm Test v$timestamp",
+    "description": "Farm Test v$timestamp"
+  }
+EOM
+)
 
-source "$local_service_path/$local_service_name-json.sh"
+result=$( \
+  curl  --silent \
+        --request "POST" \
+        --header "Authorization: Bearer $access_token" \
+        --header "Content-Type: application/json" \
+        --data "$json_body" \
+        --location "$api_url"
+)
 
-temp_url="$api_url"
-source "$local_service_path/post.sh"
+echo $result
 
 farm_ID=$(echo "$result" | jq -r '.ID')
 echo farm_ID="$farm_ID"
