@@ -94,11 +94,9 @@ Create a copy of the `set-tenant-template.sh` file and rename it to `set-tenant.
 
 We can use this tool considering three different contexts, passing the `script_type` as a parameter:
 
-`--load-data`: Use the POST method to create a new data structure for the following APIs.
-- Farms, Areas, FieldGroups, Destinations, LocationTypes, Locations, ClimateZones, Fields
+`--load-data`: Use the POST method to create a new data structure for the [following APIs](app/data-apis).
 
-`--test-api`: Execute the POST, GET, PATCH, PUT and DELETE HTTP verbs for the below APIs.
-- Farms, Areas, FieldGroups, Destinations, LocationTypes, Locations, ClimateZones
+`--test-api`: Execute the POST, GET, PATCH, PUT and DELETE HTTP verbs for the [following APIs](app/test-apis).
 
 `--load-scenario`: Execute a script to create the necessary data for the following scenarios.
 - Under construction.
