@@ -34,7 +34,7 @@
 
 ### Overview
 
-The [Entity-Dependency Diagram](diagrams/entity-dependency.svg) was created using BPMN (Business Process Model and Notation) which provides some insights and delineate the dependencies between the SAP Intelligent Agriculture entities.
+The [Entity-Dependency Diagrams](diagrams/) were created using BPMN (Business Process Model and Notation) which provides some insights and delineate the dependencies between the SAP Intelligent Agriculture entities.
 
 ### Purpose of the BPMN Diagram
 
