@@ -44,7 +44,7 @@ access_token=$(echo $result | jq -r '.access_token')
 echo $access_token
 
 # Step 6
-api_url="$server_url/foundation-api/v1/odata/v1/FarmService/Farms"
+api_url="$server_url/farm-and-field-api/v1/odata/v1/FarmAndFieldService/Farms"
 
 # Step 7
 result=$( \

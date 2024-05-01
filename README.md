@@ -6,7 +6,7 @@
 
 **API Shell Suite** is a `natively simple`, yet robust project designed to provide an isolated, reproducible, and scalable environment to validate and monitor the availability and performance of SAP Intelligent Agriculture APIs. By combining the containerization capabilities of Docker with the simplicity of shell scripting and the adaptability of `curl`, we have created a tool that seamlessly integrates into your development and operational workflows, providing instant feedback on the health of your SAP interfaces.
 
-> ⚠️ **Disclaimer:** Do not use this tool for productive purposes.
+> ⚠️ **Important Disclaimer:** The API Shell Suite aims to support you during testing and trying out of the APIs. While it may be enhanced over time, **it is not an official tool delivered with the solution**. Do not use this tool for productive purposes.
 
 ### Key Component Features
 
