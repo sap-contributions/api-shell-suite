@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # CHANGE the service url
-service_url="foundation-api/v1/odata/v1/ClimateZoneService/ClimateZones"
+service_url="farm-and-field-api/v1/odata/v1/FarmAndFieldService/ClimateZones"
 
 echo "[INFO]: Starting ---$service_url--- service."
 

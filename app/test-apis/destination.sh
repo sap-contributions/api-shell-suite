@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # service url
-service_url="foundation-api/v1/odata/v1/DestinationService/Destinations"
+service_url="farm-and-field-api/v1/odata/v1/FarmAndFieldService/Destinations"
 
 echo "[INFO]: Starting ---$service_url--- service."
 
